@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+        .product-container {
+            width: 350px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .main-product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .sub-products {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .sub-products img {
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
+        .sub-products img:hover {
+            border: 2px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <div class="main-product">
+            <img id="mainImage" src="../product-preview/img/main.jpg" alt="Main Product"height="200px"width="50">
+        </div>
+        <div class="sub-products">
+            <img src="./img/1.jpg" alt="Sub Product 1" onclick="changeImage('img/1.jpg')">
+            <img src="./img/2.jpg" alt="Sub Product 2" onclick="changeImage('img/2.jpg')">
+            <img src="./img/3.jpg" alt="Sub Product 3" onclick="changeImage('img/3.jpg')">
+        </div>
+    </div>
+
+    <script>
+        function changeImage(imageSrc) {
+            document.getElementById('mainImage').src = imageSrc;
+        }
+    </script>
+</body>
+</html>
